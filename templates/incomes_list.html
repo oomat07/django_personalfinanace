@@ -10,7 +10,7 @@
     <a href="{% url 'create_income' %}"><button class="btn btn-danger"> Добавить </button></a>
     <ul>
         {% for income in incomes %}
-        <li>{{income.source}} : {{income.amount}}</li>
+        <a href="{% url 'income_detail' income.id %}"><li>{{income.source}} : {{income.amount}}</li></a>
         {% endfor %}
     </ul>
     
