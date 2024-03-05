@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список расходов</title>
+</head>
+<body>
+    <h1>Расходы</h1>
+    <ul>
+        {% for expense in expenses %}
+            <li>{{ expense.category }} - {{ expense.amount }} сом </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
