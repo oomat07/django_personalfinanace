@@ -17,5 +17,5 @@ class ExpenseCreateView(CreateView):
 
 class ExpenseDetailView(DetailView):
     model = Expense
-    context_object_name = 'expenses'
+    context_object_name = 'expense'
     template_name = 'expenses_detail.html'

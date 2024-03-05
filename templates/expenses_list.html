@@ -7,9 +7,11 @@
     <h1>Расходы</h1>
     <ul>
         {% for expense in expenses %}
-            <li>{{ expense.category }} - {{ expense.amount }} сом </li>
+            <a href="{% url 'expenses_detail' expense.id %}"><li>{{ expense.category }} - {{ expense.amount }} сом </li></a>
         {% endfor %}
         <a href="{% url 'create_expenses' %}"><button class="btn btn-danger"> Добавить </button></a>
     </ul>
 </body>
 </html>
+
+
