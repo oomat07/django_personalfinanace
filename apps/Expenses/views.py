@@ -13,9 +13,9 @@ class ExpenseCreateView(CreateView):
     model = Expense
     template_name = 'create_expenses.html'
     form_class = ExpenseForm
-    success_url = reverse_lazy('expenses')
+    success_url = reverse_lazy('expenses_list')
 
 class ExpenseDetailView(DetailView):
     model = Expense
-    context_object_name = 'expense'
-    template_name = 'expense_detail.html'
+    context_object_name = 'expenses'
+    template_name = 'expenses_detail.html'
